@@ -2,19 +2,20 @@
 
 @layer base {
   :root {
-    --color-bg: #0C0B0E;
-    --color-surface: #141318;
-    --color-surface-hover: #1C1A22;
-    --color-surface-card: #18161E;
-    --color-border: #2A2733;
-    --color-border-subtle: #201E28;
-    --color-gold: #D4AF37;
-    --color-gold-light: #EEDB92;
-    --color-gold-muted: #9E8546;
-    --color-amber: #D97706;
-    --color-text-main: #F4F1EA;
-    --color-text-muted: #A39E93;
-    --color-text-dim: #6E6961;
+    --color-bg: #FAF8F5;
+    --color-surface: #FFFFFF;
+    --color-surface-hover: #F8F4EC;
+    --color-surface-card: #FFFFFF;
+    --color-border: #E7E1D4;
+    --color-border-subtle: #F0EBE0;
+    --color-gold: #C5A059;
+    --color-gold-light: #F7EED5;
+    --color-gold-dark: #8C6920;
+    --color-gold-accent: #D4AF37;
+    --color-amber: #B45309;
+    --color-text-main: #1A1816;
+    --color-text-muted: #666158;
+    --color-text-dim: #948E83;
   }
 
   body {
@@ -32,39 +33,39 @@
   }
 }
 
-/* Custom scrollbar for luxury feel */
+/* Custom scrollbar for white and gold luxury feel */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0C0B0E;
+  background: #F4EFE6;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2A2733;
+  background: #D8D1C3;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #D4AF37;
+  background: #C5A059;
 }
 
-/* Glassmorphism utility */
+/* Glassmorphism utility for white/gold luxury */
 .glass-panel {
-  background: rgba(20, 19, 24, 0.75);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(197, 160, 89, 0.25);
 }
 
 .gold-gradient-text {
-  background: linear-gradient(135deg, #FFF0BE 0%, #D4AF37 50%, #AA820A 100%);
+  background: linear-gradient(135deg, #B8860B 0%, #D4AF37 50%, #8C6920 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gold-gradient-border {
-  border-image: linear-gradient(135deg, rgba(212, 175, 55, 0.4), rgba(212, 175, 55, 0.1)) 1;
+  border-image: linear-gradient(135deg, rgba(212, 175, 55, 0.6), rgba(197, 160, 89, 0.2)) 1;
 }

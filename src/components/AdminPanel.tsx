@@ -180,15 +180,15 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-[#0C0B0E]/90 backdrop-blur-md flex items-center justify-center p-4">
-      <div className="relative w-full max-w-5xl bg-[#121016] border border-[#2A2733] text-[#F4F1EA] shadow-2xl rounded-sm overflow-hidden max-h-[90vh] flex flex-col">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-[#FFFFFF]/90 backdrop-blur-md flex items-center justify-center p-4">
+      <div className="relative w-full max-w-5xl bg-[#FFFFFF] border border-[#DDD5C5] text-[#1A1816] shadow-2xl rounded-sm overflow-hidden max-h-[90vh] flex flex-col">
         {/* Header */}
-        <div className="px-6 py-4 border-b border-[#24212D] flex items-center justify-between bg-[#0E0C12]">
+        <div className="px-6 py-4 border-b border-[#E7E1D4] flex items-center justify-between bg-[#F8F5EE]">
           <div className="flex items-center gap-3">
-            <span className="text-sm font-serif tracking-[0.2em] uppercase text-[#F4F1EA]">
+            <span className="text-sm font-serif tracking-[0.2em] uppercase text-[#1A1816]">
               Maison Inventory & Product Atelier
             </span>
-            <span className="text-xs font-mono text-[#D4AF37]">
+            <span className="text-xs font-mono text-[#8C6920]">
               • Admin Console
             </span>
           </div>
@@ -201,14 +201,14 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose }) => {
                   notify('Catalog restored to default');
                 }
               }}
-              className="text-xs font-mono text-[#6E6961] hover:text-[#D4AF37] flex items-center gap-1.5"
+              className="text-xs font-mono text-[#766F64] hover:text-[#8C6920] flex items-center gap-1.5"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               Reset Defaults
             </button>
             <button
               onClick={onClose}
-              className="p-1.5 text-[#A39E93] hover:text-[#D4AF37] transition-colors"
+              className="p-1.5 text-[#666158] hover:text-[#8C6920] transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
@@ -224,35 +224,35 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose }) => {
         )}
 
         {/* Summary Metric Cards */}
-        <div className="p-6 grid grid-cols-1 sm:grid-cols-3 gap-4 border-b border-[#24212D] bg-[#16141D]">
-          <div className="bg-[#0C0B0E] p-4 border border-[#24212D] flex items-center gap-3">
-            <Package className="w-5 h-5 text-[#D4AF37]" />
+        <div className="p-6 grid grid-cols-1 sm:grid-cols-3 gap-4 border-b border-[#E7E1D4] bg-[#FBF9F4]">
+          <div className="bg-[#FFFFFF] p-4 border border-[#E7E1D4] flex items-center gap-3">
+            <Package className="w-5 h-5 text-[#8C6920]" />
             <div>
-              <span className="text-[10px] font-mono text-[#6E6961] uppercase block">
+              <span className="text-[10px] font-mono text-[#766F64] uppercase block">
                 Total Flacons in Stock
               </span>
-              <span className="text-lg font-mono font-medium text-[#F4F1EA]">
+              <span className="text-lg font-mono font-medium text-[#1A1816]">
                 {totalStock} units ({products.length} Fragrances)
               </span>
             </div>
           </div>
 
-          <div className="bg-[#0C0B0E] p-4 border border-[#24212D] flex items-center gap-3">
-            <DollarSign className="w-5 h-5 text-[#D4AF37]" />
+          <div className="bg-[#FFFFFF] p-4 border border-[#E7E1D4] flex items-center gap-3">
+            <DollarSign className="w-5 h-5 text-[#8C6920]" />
             <div>
-              <span className="text-[10px] font-mono text-[#6E6961] uppercase block">
+              <span className="text-[10px] font-mono text-[#766F64] uppercase block">
                 Inventory Valuation
               </span>
-              <span className="text-lg font-mono font-medium text-[#EEDB92]">
+              <span className="text-lg font-mono font-medium text-[#8C6920]">
                 ${totalValuation.toLocaleString()} USD
               </span>
             </div>
           </div>
 
-          <div className="bg-[#0C0B0E] p-4 border border-[#24212D] flex items-center gap-3">
+          <div className="bg-[#FFFFFF] p-4 border border-[#E7E1D4] flex items-center gap-3">
             <AlertTriangle className="w-5 h-5 text-amber-500" />
             <div>
-              <span className="text-[10px] font-mono text-[#6E6961] uppercase block">
+              <span className="text-[10px] font-mono text-[#766F64] uppercase block">
                 Low Inventory Alerts
               </span>
               <span className="text-lg font-mono font-medium text-amber-400">
@@ -268,22 +268,22 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose }) => {
             /* Product Table View */
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <h4 className="text-xs font-mono uppercase tracking-widest text-[#F4F1EA]">
+                <h4 className="text-xs font-mono uppercase tracking-widest text-[#1A1816]">
                   Active Fragrance Master Catalog
                 </h4>
                 <button
                   type="button"
                   onClick={handleOpenCreate}
-                  className="px-4 py-2 bg-[#D4AF37] hover:bg-[#EEDB92] text-[#0C0B0E] font-mono text-xs uppercase tracking-wider font-bold flex items-center gap-1.5"
+                  className="px-4 py-2 bg-[#D4AF37] hover:bg-[#8C6920] text-[#1A1816] font-mono text-xs uppercase tracking-wider font-bold flex items-center gap-1.5"
                 >
                   <Plus className="w-3.5 h-3.5" />
                   <span>Create New Flacon</span>
                 </button>
               </div>
 
-              <div className="border border-[#24212D] overflow-x-auto">
+              <div className="border border-[#E7E1D4] overflow-x-auto">
                 <table className="w-full text-left text-xs font-mono">
-                  <thead className="bg-[#0C0B0E] text-[#6E6961] border-b border-[#24212D] uppercase text-[10px]">
+                  <thead className="bg-[#FFFFFF] text-[#766F64] border-b border-[#E7E1D4] uppercase text-[10px]">
                     <tr>
                       <th className="p-3">Flacon</th>
                       <th className="p-3">Family</th>
@@ -294,27 +294,27 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose }) => {
                       <th className="p-3 text-right">Actions</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[#24212D]/60 bg-[#121016]">
+                  <tbody className="divide-y divide-[#E7E1D4]/60 bg-[#FFFFFF]">
                     {products.map((p) => (
-                      <tr key={p.id} className="hover:bg-[#18161E] transition-colors">
+                      <tr key={p.id} className="hover:bg-[#F8F5EE] transition-colors">
                         <td className="p-3 flex items-center gap-3">
                           <img
                             src={p.images.hero}
                             alt={p.name}
-                            className="w-9 h-10 object-cover border border-[#24212D]"
+                            className="w-9 h-10 object-cover border border-[#E7E1D4]"
                           />
                           <div>
-                            <span className="font-serif text-[#F4F1EA] text-sm block">
+                            <span className="font-serif text-[#1A1816] text-sm block">
                               {p.name}
                             </span>
-                            <span className="text-[10px] text-[#6E6961]">
+                            <span className="text-[10px] text-[#766F64]">
                               {p.perfumer}
                             </span>
                           </div>
                         </td>
-                        <td className="p-3 text-[#D4AF37]">{p.olfactoryFamily}</td>
-                        <td className="p-3 text-[#A39E93]">{p.concentration.split(' ')[0]}</td>
-                        <td className="p-3 font-medium text-[#F4F1EA]">
+                        <td className="p-3 text-[#8C6920]">{p.olfactoryFamily}</td>
+                        <td className="p-3 text-[#666158]">{p.concentration.split(' ')[0]}</td>
+                        <td className="p-3 font-medium text-[#1A1816]">
                           ${p.variants[p.defaultVariantIndex].price}
                         </td>
                         <td className="p-3">
@@ -322,18 +322,18 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose }) => {
                             className={`px-2 py-0.5 text-[10px] ${
                               p.stockCount <= 15
                                 ? 'bg-amber-950/80 text-amber-300 border border-amber-800'
-                                : 'text-[#A39E93]'
+                                : 'text-[#666158]'
                             }`}
                           >
                             {p.stockCount} units
                           </span>
                         </td>
-                        <td className="p-3 text-[#EEDB92]">{p.rating.toFixed(2)} ★</td>
+                        <td className="p-3 text-[#8C6920]">{p.rating.toFixed(2)} ★</td>
                         <td className="p-3 text-right space-x-2">
                           <button
                             type="button"
                             onClick={() => handleOpenEdit(p)}
-                            className="p-1.5 text-[#A39E93] hover:text-[#D4AF37] transition-colors"
+                            className="p-1.5 text-[#666158] hover:text-[#8C6920] transition-colors"
                             title="Edit"
                           >
                             <Edit2 className="w-3.5 h-3.5" />
@@ -346,7 +346,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose }) => {
                                 notify(`Deleted "${p.name}"`);
                               }
                             }}
-                            className="p-1.5 text-[#6E6961] hover:text-red-400 transition-colors"
+                            className="p-1.5 text-[#766F64] hover:text-red-400 transition-colors"
                             title="Delete"
                           >
                             <Trash2 className="w-3.5 h-3.5" />
@@ -361,14 +361,14 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose }) => {
           ) : (
             /* Create / Edit Form */
             <form onSubmit={handleSubmitForm} className="space-y-4 max-w-2xl mx-auto">
-              <div className="flex items-center justify-between border-b border-[#24212D] pb-3">
-                <h4 className="text-xs font-mono uppercase tracking-widest text-[#F4F1EA]">
+              <div className="flex items-center justify-between border-b border-[#E7E1D4] pb-3">
+                <h4 className="text-xs font-mono uppercase tracking-widest text-[#1A1816]">
                   {isEditing ? `Edit "${isEditing.name}"` : 'Formulate New Fragrance'}
                 </h4>
                 <button
                   type="button"
                   onClick={() => setIsCreating(false)}
-                  className="text-xs font-mono text-[#A39E93] hover:text-white"
+                  className="text-xs font-mono text-[#666158] hover:text-white"
                 >
                   Cancel
                 </button>
@@ -376,24 +376,24 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose }) => {
 
               <div className="grid grid-cols-2 gap-4 text-xs font-mono">
                 <div>
-                  <label className="block text-[#A39E93] mb-1">Fragrance Name</label>
+                  <label className="block text-[#666158] mb-1">Fragrance Name</label>
                   <input
                     type="text"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full bg-[#18161E] border border-[#2A2733] px-3 py-2 text-[#F4F1EA] focus:border-[#D4AF37] focus:outline-none"
+                    className="w-full bg-[#F8F5EE] border border-[#DDD5C5] px-3 py-2 text-[#1A1816] focus:border-[#D4AF37] focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[#A39E93] mb-1">Olfactory Family</label>
+                  <label className="block text-[#666158] mb-1">Olfactory Family</label>
                   <select
                     value={formData.olfactoryFamily}
                     onChange={(e) =>
                       setFormData({ ...formData, olfactoryFamily: e.target.value as any })
                     }
-                    className="w-full bg-[#18161E] border border-[#2A2733] px-3 py-2 text-[#F4F1EA] focus:border-[#D4AF37] focus:outline-none"
+                    className="w-full bg-[#F8F5EE] border border-[#DDD5C5] px-3 py-2 text-[#1A1816] focus:border-[#D4AF37] focus:outline-none"
                   >
                     <option value="Woody & Amber">Woody & Amber</option>
                     <option value="Oriental & Gourmand">Oriental & Gourmand</option>
@@ -406,7 +406,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose }) => {
 
               <div className="grid grid-cols-2 gap-4 text-xs font-mono">
                 <div>
-                  <label className="block text-[#A39E93] mb-1">50ml Flacon Price ($)</label>
+                  <label className="block text-[#666158] mb-1">50ml Flacon Price ($)</label>
                   <input
                     type="number"
                     required
@@ -414,12 +414,12 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose }) => {
                     onChange={(e) =>
                       setFormData({ ...formData, price50ml: Number(e.target.value) })
                     }
-                    className="w-full bg-[#18161E] border border-[#2A2733] px-3 py-2 text-[#F4F1EA] focus:border-[#D4AF37] focus:outline-none"
+                    className="w-full bg-[#F8F5EE] border border-[#DDD5C5] px-3 py-2 text-[#1A1816] focus:border-[#D4AF37] focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[#A39E93] mb-1">Available Inventory</label>
+                  <label className="block text-[#666158] mb-1">Available Inventory</label>
                   <input
                     type="number"
                     required
@@ -427,60 +427,60 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose }) => {
                     onChange={(e) =>
                       setFormData({ ...formData, stockCount: Number(e.target.value) })
                     }
-                    className="w-full bg-[#18161E] border border-[#2A2733] px-3 py-2 text-[#F4F1EA] focus:border-[#D4AF37] focus:outline-none"
+                    className="w-full bg-[#F8F5EE] border border-[#DDD5C5] px-3 py-2 text-[#1A1816] focus:border-[#D4AF37] focus:outline-none"
                   />
                 </div>
               </div>
 
               <div className="text-xs font-mono">
-                <label className="block text-[#A39E93] mb-1">Tagline & Sensory Hook</label>
+                <label className="block text-[#666158] mb-1">Tagline & Sensory Hook</label>
                 <input
                   type="text"
                   required
                   value={formData.tagline}
                   onChange={(e) => setFormData({ ...formData, tagline: e.target.value })}
-                  className="w-full bg-[#18161E] border border-[#2A2733] px-3 py-2 text-[#F4F1EA] focus:border-[#D4AF37] focus:outline-none"
+                  className="w-full bg-[#F8F5EE] border border-[#DDD5C5] px-3 py-2 text-[#1A1816] focus:border-[#D4AF37] focus:outline-none"
                 />
               </div>
 
               <div className="text-xs font-mono">
-                <label className="block text-[#A39E93] mb-1">Top Notes (comma-separated)</label>
+                <label className="block text-[#666158] mb-1">Top Notes (comma-separated)</label>
                 <input
                   type="text"
                   value={formData.topNotes}
                   onChange={(e) => setFormData({ ...formData, topNotes: e.target.value })}
-                  className="w-full bg-[#18161E] border border-[#2A2733] px-3 py-2 text-[#F4F1EA] focus:border-[#D4AF37] focus:outline-none"
+                  className="w-full bg-[#F8F5EE] border border-[#DDD5C5] px-3 py-2 text-[#1A1816] focus:border-[#D4AF37] focus:outline-none"
                 />
               </div>
 
               <div className="text-xs font-mono">
-                <label className="block text-[#A39E93] mb-1">Heart Notes (comma-separated)</label>
+                <label className="block text-[#666158] mb-1">Heart Notes (comma-separated)</label>
                 <input
                   type="text"
                   value={formData.heartNotes}
                   onChange={(e) => setFormData({ ...formData, heartNotes: e.target.value })}
-                  className="w-full bg-[#18161E] border border-[#2A2733] px-3 py-2 text-[#F4F1EA] focus:border-[#D4AF37] focus:outline-none"
+                  className="w-full bg-[#F8F5EE] border border-[#DDD5C5] px-3 py-2 text-[#1A1816] focus:border-[#D4AF37] focus:outline-none"
                 />
               </div>
 
               <div className="text-xs font-mono">
-                <label className="block text-[#A39E93] mb-1">Base Notes (comma-separated)</label>
+                <label className="block text-[#666158] mb-1">Base Notes (comma-separated)</label>
                 <input
                   type="text"
                   value={formData.baseNotes}
                   onChange={(e) => setFormData({ ...formData, baseNotes: e.target.value })}
-                  className="w-full bg-[#18161E] border border-[#2A2733] px-3 py-2 text-[#F4F1EA] focus:border-[#D4AF37] focus:outline-none"
+                  className="w-full bg-[#F8F5EE] border border-[#DDD5C5] px-3 py-2 text-[#1A1816] focus:border-[#D4AF37] focus:outline-none"
                 />
               </div>
 
               <div className="text-xs font-mono">
-                <label className="block text-[#A39E93] mb-1">High-Res Image URL</label>
+                <label className="block text-[#666158] mb-1">High-Res Image URL</label>
                 <input
                   type="url"
                   required
                   value={formData.heroImage}
                   onChange={(e) => setFormData({ ...formData, heroImage: e.target.value })}
-                  className="w-full bg-[#18161E] border border-[#2A2733] px-3 py-2 text-[#F4F1EA] focus:border-[#D4AF37] focus:outline-none"
+                  className="w-full bg-[#F8F5EE] border border-[#DDD5C5] px-3 py-2 text-[#1A1816] focus:border-[#D4AF37] focus:outline-none"
                 />
               </div>
 
@@ -488,13 +488,13 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose }) => {
                 <button
                   type="button"
                   onClick={() => setIsCreating(false)}
-                  className="px-5 py-3 border border-[#24212D] text-[#A39E93] font-mono text-xs uppercase"
+                  className="px-5 py-3 border border-[#E7E1D4] text-[#666158] font-mono text-xs uppercase"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 py-3 bg-[#D4AF37] hover:bg-[#EEDB92] text-[#0C0B0E] font-mono text-xs uppercase tracking-widest font-bold"
+                  className="flex-1 py-3 bg-[#D4AF37] hover:bg-[#8C6920] text-[#1A1816] font-mono text-xs uppercase tracking-widest font-bold"
                 >
                   {isEditing ? 'Save Changes' : 'Publish Fragrance'}
                 </button>
