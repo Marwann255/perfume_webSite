@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 // import { ShieldCheck, Sparkles, RefreshCw, Send, Check } from 'lucide-react';
-import type { OlfactoryFamily } from '../types';
-import { useProducts } from '../context/ProductContext';
+// import type { OlfactoryFamily } from '../types';
+// import { useProducts } from '../context/ProductContext';
 
 interface FooterProps {
   onOpenStory: () => void;
@@ -14,23 +14,23 @@ const CURRENT_YEAR = new Date().getFullYear();
 export const Footer: React.FC<FooterProps> = ({
   //  onOpenStory, onOpenFAQ, onOpenQuiz 
   }) => {
-  const { setFilters, setSelectedProductId } = useProducts();
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
+  // const { setFilters, setSelectedProductId } = useProducts();
+  // const [email, setEmail] = useState('');
+  // const [subscribed, setSubscribed] = useState(false);
 
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setEmail('');
-    }
-  };
+  // const handleSubscribe = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   if (email) {
+  //     setSubscribed(true);
+  //     setEmail('');
+  //   }
+  // };
 
-  const handleFamilyFilter = (family: OlfactoryFamily) => {
-    setSelectedProductId(null);
-    setFilters((prev) => ({ ...prev, family }));
-    window.scrollTo({ top: 400, behavior: 'smooth' });
-  };
+  // const handleFamilyFilter = (family: OlfactoryFamily) => {
+  //   setSelectedProductId(null);
+  //   setFilters((prev) => ({ ...prev, family }));
+  //   window.scrollTo({ top: 400, behavior: 'smooth' });
+  // };
 
   return (
     <footer className="bg-[#F8F5EE] border-t border-[#E7E1D4] text-[#666158] text-sm mt-20">
