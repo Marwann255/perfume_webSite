@@ -55,7 +55,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack })
           className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#666158] hover:text-[#8C6920] transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Return to Olfactory Collection</span>
+          <span>Return to Home</span>
         </button>
 
         <div className="flex items-center gap-4 text-xs font-mono text-[#766F64]">
@@ -77,7 +77,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack })
             />
 
             {/* Badges */}
-            <div className="absolute top-4 left-4 flex flex-col gap-1.5">
+            {/* <div className="absolute top-4 left-4 flex flex-col gap-1.5">
               {product.isBestseller && (
                 <span className="px-3 py-1 text-[11px] font-mono uppercase tracking-widest bg-[#D4AF37] text-[#1A1816] font-semibold">
                   Maison Bestseller
@@ -86,7 +86,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack })
               <span className="px-3 py-1 text-[11px] font-mono uppercase tracking-widest bg-[#F8F5EE]/90 border border-[#DDD5C5] text-[#8C6920] backdrop-blur-md">
                 Grasse Formula • {product.concentration.split(' ')[0]}
               </span>
-            </div>
+            </div> */}
 
             {/* Wishlist Button */}
             <button
@@ -177,11 +177,11 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack })
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-xs font-mono text-[#8C6920]">
               <span>{product.subtitle}</span>
-              <span>•</span>
-              <span className="flex items-center gap-1 text-[#8C6920]">
+              {/* <span>•</span> */}
+              {/* <span className="flex items-center gap-1 text-[#8C6920]">
                 <Star className="w-3.5 h-3.5 fill-[#D4AF37]" />
                 {product.rating.toFixed(2)} ({product.reviewCount} Reviews)
-              </span>
+              </span> */}
             </div>
 
             <h1 className="text-3xl sm:text-4xl font-serif text-[#1A1816] tracking-tight">
@@ -232,7 +232,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack })
           </div>
 
           {/* Complimentary Sample Reassurance Box */}
-          <div className="bg-[#FBF9F4] border border-[#D4AF37]/30 p-4 rounded-sm flex items-start gap-3.5">
+          {/* <div className="bg-[#FBF9F4] border border-[#D4AF37]/30 p-4 rounded-sm flex items-start gap-3.5">
             <ShieldCheck className="w-5 h-5 text-[#8C6920] shrink-0 mt-0.5" />
             <div className="text-xs space-y-1">
               <span className="font-mono uppercase tracking-wider text-[#8C6920] font-semibold block">
@@ -242,10 +242,10 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack })
                 Your order includes a complimentary matching 2ml sample vial. Test the fragrance on your skin first. If it does not resonate with you, simply return the unopened full-size flacon in its original gold seal for a 100% refund.
               </p>
             </div>
-          </div>
+          </div> */}
 
           {/* Bespoke Monogram Engraving Toggle */}
-          <div className="border border-[#E7E1D4] bg-[#FBF9F4] p-4 rounded-sm space-y-3">
+          {/* <div className="border border-[#E7E1D4] bg-[#FBF9F4] p-4 rounded-sm space-y-3">
             <div className="flex items-center justify-between">
               <span className="text-xs font-mono uppercase tracking-wider text-[#1A1816] flex items-center gap-2">
                 <Sparkles className="w-3.5 h-3.5 text-[#8C6920]" />
@@ -275,7 +275,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack })
                 </span>
               </div>
             )}
-          </div>
+          </div> */}
 
           {/* Add to Cart Controls */}
           <div className="space-y-3 pt-2">
@@ -319,13 +319,13 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack })
                 ) : (
                   <>
                     <Sparkles className="w-4 h-4" />
-                    <span>Acquire Flacon — ${selectedVariant.price * quantity}</span>
+                    <span>Buy Now — ${selectedVariant.price * quantity}</span>
                   </>
                 )}
               </button>
             </div>
 
-            <div className="flex items-center justify-center gap-6 text-[11px] font-mono text-[#766F64] pt-2">
+            {/* <div className="flex items-center justify-center gap-6 text-[11px] font-mono text-[#766F64] pt-2">
               <span className="flex items-center gap-1.5">
                 <Lock className="w-3 h-3 text-[#8C6920]" />
                 Stripe 256-bit Encrypted
@@ -334,11 +334,11 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack })
               <span>Express Climate Courier</span>
               <span>•</span>
               <span>Seal Intact Returns</span>
-            </div>
+            </div> */}
           </div>
 
           {/* Interactive Olfactory Note Pyramid */}
-          <div className="border border-[#E7E1D4] bg-[#FBF9F4] p-6 rounded-sm space-y-6">
+          {/* <div className="border border-[#E7E1D4] bg-[#FBF9F4] p-6 rounded-sm space-y-6">
             <div className="flex items-center justify-between border-b border-[#E7E1D4] pb-3">
               <h3 className="text-sm font-mono uppercase tracking-widest text-[#1A1816] flex items-center gap-2">
                 <Layers className="w-4 h-4 text-[#8C6920]" />
@@ -360,12 +360,12 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack })
                   </button>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Pyramid Stages */}
-            <div className="space-y-4">
+            {/* <div className="space-y-4">
               {/* Top Notes */}
-              {(activePyramidTier === 'all' || activePyramidTier === 'top') && (
+              {/* {(activePyramidTier === 'all' || activePyramidTier === 'top') && (
                 <div className="p-3.5 bg-[#FFFFFF] border-l-2 border-[#8C6920] space-y-2">
                   <div className="flex items-center justify-between text-xs font-mono">
                     <span className="text-[#8C6920] uppercase font-semibold">
@@ -389,11 +389,13 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack })
                       </div>
                     ))}
                   </div>
-                </div>
-              )}
+                </div> */}
+              {/* )}  */}
+              
+            
 
               {/* Heart Notes */}
-              {(activePyramidTier === 'all' || activePyramidTier === 'heart') && (
+              {/* {(activePyramidTier === 'all' || activePyramidTier === 'heart') && (
                 <div className="p-3.5 bg-[#FFFFFF] border-l-2 border-[#D4AF37] space-y-2">
                   <div className="flex items-center justify-between text-xs font-mono">
                     <span className="text-[#8C6920] uppercase font-semibold">
@@ -418,10 +420,10 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack })
                     ))}
                   </div>
                 </div>
-              )}
+              )} */}
 
               {/* Base Notes */}
-              {(activePyramidTier === 'all' || activePyramidTier === 'base') && (
+              {/* {(activePyramidTier === 'all' || activePyramidTier === 'base') && (
                 <div className="p-3.5 bg-[#FFFFFF] border-l-2 border-[#9E8546] space-y-2">
                   <div className="flex items-center justify-between text-xs font-mono">
                     <span className="text-[#9E8546] uppercase font-semibold">
@@ -448,10 +450,10 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack })
                 </div>
               )}
             </div>
-          </div>
+          </div> */}
 
           {/* Scent Story & Inspiration */}
-          <div className="space-y-4 text-xs text-[#666158] leading-relaxed">
+          {/* <div className="space-y-4 text-xs text-[#666158] leading-relaxed">
             <h4 className="text-xs font-mono uppercase tracking-widest text-[#1A1816]">
               The Story of Creation
             </h4>
@@ -470,12 +472,12 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack })
                 <p className="text-[#766F64]">{product.applicationRitual}</p>
               </div>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
 
       {/* Customer Reviews Section */}
-      <div className="mt-20 pt-12 border-t border-[#E7E1D4] space-y-8">
+      {/* <div className="mt-20 pt-12 border-t border-[#E7E1D4] space-y-8">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h3 className="text-2xl font-serif text-[#1A1816]">
@@ -532,7 +534,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack })
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Cross-Sell Recommendations */}
       <div className="mt-20 pt-12 border-t border-[#E7E1D4] space-y-8">

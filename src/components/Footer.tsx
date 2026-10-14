@@ -11,7 +11,9 @@ interface FooterProps {
 
 const CURRENT_YEAR = new Date().getFullYear();
 
-export const Footer: React.FC<FooterProps> = ({ onOpenStory, onOpenFAQ, onOpenQuiz }) => {
+export const Footer: React.FC<FooterProps> = ({
+  //  onOpenStory, onOpenFAQ, onOpenQuiz 
+  }) => {
   const { setFilters, setSelectedProductId } = useProducts();
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
@@ -33,7 +35,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenStory, onOpenFAQ, onOpenQu
   return (
     <footer className="bg-[#F8F5EE] border-t border-[#E7E1D4] text-[#666158] text-sm mt-20">
       {/* Brand Value Pillars */}
-      <div className="border-b border-[#F0EBE0]">
+      {/* <div className="border-b border-[#F0EBE0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
             <div className="p-3 rounded-full bg-[#F8F5EE] border border-[#D4AF37]/20 text-[#8C6920]">
@@ -77,12 +79,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenStory, onOpenFAQ, onOpenQu
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Footer Links & Newsletter */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-5 gap-12">
+      {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-5 gap-12"> */}
         {/* Brand & Newsletter Column */}
-        <div className="md:col-span-2 space-y-4">
+        {/* <div className="md:col-span-2 space-y-4">
           <h3 className="text-xl font-serif tracking-[0.2em] text-[#1A1816] uppercase">
             A U R A I S
           </h3>
@@ -122,10 +124,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenStory, onOpenFAQ, onOpenQu
               We respect your privacy. No promotional spam; only harvest allocations.
             </p>
           </div>
-        </div>
+        </div> */}
 
         {/* Olfactory Library */}
-        <div>
+        {/* <div>
           <h4 className="text-xs uppercase tracking-widest text-[#1A1816] font-semibold mb-4">
             Olfactory Families
           </h4>
@@ -171,10 +173,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenStory, onOpenFAQ, onOpenQu
               </button>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         {/* Concierge & Service */}
-        <div>
+        {/* <div>
           <h4 className="text-xs uppercase tracking-widest text-[#1A1816] font-semibold mb-4">
             Concierge & Care
           </h4>
@@ -205,10 +207,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenStory, onOpenFAQ, onOpenQu
               </button>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         {/* The Maison & Standards */}
-        <div>
+        {/* <div>
           <h4 className="text-xs uppercase tracking-widest text-[#1A1816] font-semibold mb-4">
             The Atelier
           </h4>
@@ -234,15 +236,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenStory, onOpenFAQ, onOpenQu
               </span>
             </li>
           </ul>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
 
       {/* Bottom Legal & Payment Badges */}
       <div className="border-t border-[#F0EBE0] bg-[#F4F0E7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#766F64]">
           <p>© {CURRENT_YEAR} AURAIS Haute Parfumerie. All rights reserved.</p>
 
-          <div className="flex items-center gap-6">
+          {/* <div className="flex items-center gap-6">
             <span className="text-[11px] uppercase tracking-wider text-[#666158]">
               Secure Checkout via Stripe
             </span>
@@ -252,7 +254,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenStory, onOpenFAQ, onOpenQu
               <span className="px-2 py-0.5 border border-[#DDD5C5] rounded text-[10px]">Klarna</span>
               <span className="px-2 py-0.5 border border-[#DDD5C5] rounded text-[10px]">Visa / MC / Amex</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

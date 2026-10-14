@@ -36,7 +36,7 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="sticky top-0 z-40 w-full bg-[#FFFFFF]/90 backdrop-blur-md border-b border-[#DDD5C5]/70">
       {/* Top Luxury Announcement Bar */}
-      <div className="bg-[#FBF9F4] border-b border-[#E7E1D4] text-xs text-[#8C6920] px-4 py-2 font-mono tracking-widest text-center flex items-center justify-center gap-4 overflow-x-auto whitespace-nowrap">
+      {/* <div className="bg-[#FBF9F4] border-b border-[#E7E1D4] text-xs text-[#8C6920] px-4 py-2 font-mono tracking-widest text-center flex items-center justify-center gap-4 overflow-x-auto whitespace-nowrap">
         <span className="flex items-center gap-1.5">
           <Sparkles className="w-3.5 h-3.5 text-[#8C6920]" />
           COMPLIMENTARY 2ML SAMPLE WITH EVERY FLACON — TEST BEFORE UNSEALING
@@ -45,21 +45,22 @@ export const Header: React.FC<HeaderProps> = ({
         <span className="hidden md:inline text-[#666158]">
           COMPLIMENTARY CLIMATE-NEUTRAL COURIER OVER $120
         </span>
-      </div>
+      </div> */}
 
       {/* Main Header Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Left: Mobile Menu Button & Desktop Quick Links */}
-        <div className="flex items-center gap-6">
-          <button
+        {/* <div></div> */}
+        {/* <div className="flex items-center gap-6"> */}
+          {/* <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 text-[#666158] hover:text-[#8C6920] transition-colors"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          </button>  */}
 
-          <nav className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-[#666158]">
+          {/* <nav className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest text-[#666158]">
             <button
               onClick={() => {
                 setSelectedProductId(null);
@@ -87,15 +88,15 @@ export const Header: React.FC<HeaderProps> = ({
               className="hover:text-[#8C6920] transition-colors"
             >
               Fresh
-            </button>
-            <button
+            </button> */}
+            {/* <button
               onClick={onOpenStory}
               className="hover:text-[#8C6920] transition-colors"
             >
               Maison
-            </button>
-          </nav>
-        </div>
+            </button> */}
+           {/* </nav> */}
+        {/* </div>  */}
 
         {/* Center: Brand Identity */}
         <div className="text-center cursor-pointer" onClick={() => { setSelectedProductId(null); onNavigateHome(); }}>
@@ -146,14 +147,14 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
 
           {/* Admin Atelier Switcher */}
-          <button
+          {/* <button
             onClick={onOpenAdmin}
             className="hidden sm:flex items-center gap-1.5 p-2 text-[#766F64] hover:text-[#666158] transition-colors text-xs"
             title="Maison Inventory & Admin Atelier"
           >
             <Sliders className="w-4 h-4" />
             <span className="text-[11px] uppercase tracking-wider">Atelier</span>
-          </button>
+          </button> */}
 
           {/* Shopping Bag Trigger */}
           <button

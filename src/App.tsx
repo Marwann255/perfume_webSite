@@ -114,7 +114,7 @@ const MainStoreContent: React.FC = () => {
                   </div>
 
                   {/* Trust Factors */}
-                  <div className="grid grid-cols-3 gap-4 pt-6 border-t border-[#F0EBE0] text-[11px] font-mono text-[#766F64]">
+                  {/* <div className="grid grid-cols-3 gap-4 pt-6 border-t border-[#F0EBE0] text-[11px] font-mono text-[#766F64]">
                     <div>
                       <span className="text-[#8C6920] font-semibold block">100% Risk-Free</span>
                       <span>2ml sample test first</span>
@@ -127,7 +127,7 @@ const MainStoreContent: React.FC = () => {
                       <span className="text-[#8C6920] font-semibold block">Bespoke Refills</span>
                       <span>20% flacon credit</span>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Hero Showcase Bottle Visual */}

@@ -4,14 +4,14 @@ import { useProducts } from '../context/ProductContext';
 import { ProductCard } from './ProductCard';
 import type { OlfactoryFamily } from '../types';
 
-const OLFACTORY_FAMILIES: { name: OlfactoryFamily | 'All'; label: string }[] = [
-  { name: 'All', label: 'All Creátions' },
-  { name: 'Woody & Amber', label: 'Woody & Amber' },
-  { name: 'Oriental & Gourmand', label: 'Oriental & Gourmand' },
-  { name: 'Floral & Powdery', label: 'Floral & Powdery' },
-  { name: 'Fresh & Citrus', label: 'Fresh & Citrus' },
-  { name: 'Smoky & Incense', label: 'Smoky & Incense' }
-];
+// const OLFACTORY_FAMILIES: { name: OlfactoryFamily | 'All'; label: string }[] = [
+//   { name: 'All', label: 'All Creátions' },
+//   { name: 'Woody & Amber', label: 'Woody & Amber' },
+//   { name: 'Oriental & Gourmand', label: 'Oriental & Gourmand' },
+//   { name: 'Floral & Powdery', label: 'Floral & Powdery' },
+//   { name: 'Fresh & Citrus', label: 'Fresh & Citrus' },
+//   { name: 'Smoky & Incense', label: 'Smoky & Incense' }
+// ];
 
 const POPULAR_NOTES = [
   'Assam Agarwood (Oud)',
@@ -72,7 +72,7 @@ export const ProductList: React.FC = () => {
 
       {/* Top Filter Bar: Family Tabs */}
       <div className="flex items-center justify-between gap-4 border-b border-[#E7E1D4] pb-4 mb-8 overflow-x-auto">
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           {OLFACTORY_FAMILIES.map((fam) => {
             const isActive = filters.family === fam.name;
             return (
@@ -90,10 +90,10 @@ export const ProductList: React.FC = () => {
               </button>
             );
           })}
-        </div>
+        </div> */}
 
         {/* Filter Drawer Toggle & Sort Selector */}
-        <div className="flex items-center gap-3 shrink-0">
+        {/* <div className="flex items-center gap-3 shrink-0">
           <button
             type="button"
             onClick={() => setMobileFilterOpen(!mobileFilterOpen)}
@@ -113,38 +113,38 @@ export const ProductList: React.FC = () => {
             }
             className="px-3 py-2 text-xs font-mono uppercase tracking-wider border border-[#DDD5C5] bg-[#FBF9F4] text-[#666158] focus:outline-none focus:border-[#D4AF37]"
           >
-            <option value="featured">Featured Curations</option>
-            <option value="rating">Highest Rated</option>
-            <option value="price-asc">Price: Low to High</option>
-            <option value="price-desc">Price: High to Low</option>
-            <option value="name">Alphabetical (A-Z)</option>
-          </select>
-        </div>
+            <option value="featured">Featured Curations</option> */}
+            {/* <option value="rating">Highest Rated</option> */}
+            {/* <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option> */}
+            {/* <option value="name">Alphabetical (A-Z)</option> */}
+          {/* </select> */}
+        {/* </div> */}
       </div>
 
       {/* Expanded Refinement Drawer / Panel */}
-      {mobileFilterOpen && (
-        <div className="bg-[#FBF9F4] border border-[#E7E1D4] p-6 mb-8 rounded-sm space-y-6 animate-in fade-in">
-          <div className="flex items-center justify-between border-b border-[#E7E1D4] pb-3">
-            <h4 className="text-xs font-mono uppercase tracking-widest text-[#1A1816] flex items-center gap-2">
-              <SlidersHorizontal className="w-3.5 h-3.5 text-[#8C6920]" />
-              Olfactory Filter Matrix
-            </h4>
-            {hasActiveFilters && (
-              <button
-                type="button"
-                onClick={resetFilters}
-                className="text-xs font-mono text-[#8C6920] hover:text-[#8C6920] flex items-center gap-1.5"
-              >
-                <RotateCcw className="w-3 h-3" />
-                Reset All Filters
-              </button>
-            )}
-          </div>
+      {/* {mobileFilterOpen && ( *
+        // <div className="bg-[#FBF9F4] border border-[#E7E1D4] p-6 mb-8 rounded-sm space-y-6 animate-in fade-in">
+        //   <div className="flex items-center justify-between border-b border-[#E7E1D4] pb-3">
+        //     <h4 className="text-xs font-mono uppercase tracking-widest text-[#1A1816] flex items-center gap-2">
+        //       <SlidersHorizontal className="w-3.5 h-3.5 text-[#8C6920]" />
+        //       Olfactory Filter Matrix
+        //     </h4>
+        //     {hasActiveFilters && (
+        //       <button
+        //         type="button"
+        //         onClick={resetFilters}
+        //         className="text-xs font-mono text-[#8C6920] hover:text-[#8C6920] flex items-center gap-1.5"
+        //       >
+        //         <RotateCcw className="w-3 h-3" />
+        //         Reset All Filters
+        //       </button>
+        //     )}
+        //   </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+        //   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
             {/* Note facet tags */}
-            <div>
+            {/* <div>
               <span className="block font-mono uppercase tracking-wider text-[#666158] mb-2.5">
                 Signature Notes
               </span>
@@ -167,10 +167,10 @@ export const ProductList: React.FC = () => {
                   );
                 })}
               </div>
-            </div>
+            </div> */}
 
             {/* Price Range Slider */}
-            <div>
+            {/* <div>
               <div className="flex items-center justify-between font-mono uppercase tracking-wider text-[#666158] mb-2.5">
                 <span>Maximum Flacon Price</span>
                 <span className="text-[#8C6920]">${filters.maxPrice}</span>
@@ -190,10 +190,10 @@ export const ProductList: React.FC = () => {
                 <span>$45 (Discovery)</span>
                 <span>$350 (Grand Extrait)</span>
               </div>
-            </div>
+            </div> */}
 
             {/* Minimum Rating */}
-            <div>
+            {/* <div>
               <span className="block font-mono uppercase tracking-wider text-[#666158] mb-2.5">
                 Collector Rating
               </span>
@@ -217,8 +217,8 @@ export const ProductList: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-      )}
+        </div> */}
+      
 
       {/* Active Filter Chips */}
       {hasActiveFilters && (
@@ -274,10 +274,10 @@ export const ProductList: React.FC = () => {
         <span>
           Showing {filteredProducts.length} of {products.length} Fragrances
         </span>
-        <span className="text-[#8C6920] flex items-center gap-1">
+        {/* <span className="text-[#8C6920] flex items-center gap-1">
           <Sparkles className="w-3 h-3" />
           Handcrafted in Grasse
-        </span>
+        </span> */}
       </div>
 
       {/* Product Cards Grid */}

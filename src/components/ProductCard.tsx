@@ -38,7 +38,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
     >
       {/* Top Badges & Wishlist Action */}
       <div className="absolute top-3 inset-x-3 z-10 flex items-center justify-between pointer-events-none">
-        <div className="flex flex-col gap-1 items-start">
+        {/* <div className="flex flex-col gap-1 items-start">
           {product.isBestseller && (
             <span className="px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-widest bg-[#D4AF37] text-[#1A1816] font-semibold rounded-none shadow">
               Bestseller
@@ -54,7 +54,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
               100% Credit Voucher
             </span>
           )}
-        </div>
+        </div> */}
 
         <button
           onClick={handleWishlistClick}
@@ -107,12 +107,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
             {product.name}
           </h3>
 
-          <p className="text-xs text-[#766F64] line-clamp-2 mt-1 leading-relaxed">
+          {/* <p className="text-xs text-[#766F64] line-clamp-2 mt-1 leading-relaxed">
             {product.tagline}
-          </p>
+          </p> */}
 
           {/* Key Olfactory Accords Preview */}
-          <div className="flex flex-wrap gap-1.5 mt-3">
+          {/* <div className="flex flex-wrap gap-1.5 mt-3">
             {product.accords.slice(0, 3).map((accord) => (
               <span
                 key={accord}
@@ -121,10 +121,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
                 {accord}
               </span>
             ))}
-          </div>
+          </div> */}
 
           {/* Review Score & Star Rating */}
-          <div className="flex items-center gap-2 mt-3.5 text-xs">
+          {/* <div className="flex items-center gap-2 mt-3.5 text-xs">
             <div className="flex items-center text-[#8C6920]">
               <Star className="w-3.5 h-3.5 fill-[#D4AF37]" />
               <span className="ml-1 font-mono font-medium text-[#1A1816] text-xs">
@@ -134,7 +134,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
             <span className="text-[#766F64] text-[11px]">
               ({product.reviewCount} reviews)
             </span>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Buying Controls */}
@@ -161,19 +161,19 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
           <div className="flex items-center justify-between gap-3">
             <div>
               <div className="flex items-baseline gap-2">
-                <span className="text-base font-serif font-medium text-[#1A1816]">
+                {/* <span className="text-base font-serif font-medium text-[#1A1816]">
                   ${selectedVariant.price}
-                </span>
+                </span> */}
                 {selectedVariant.originalPrice && (
-                  <span className="text-xs font-mono text-[#766F64] line-through">
+                  <span className="text-base font-serif font-medium text-[#1A1816]">
                     ${selectedVariant.originalPrice}
                   </span>
                 )}
               </div>
-              <span className="text-[10px] text-[#666158] flex items-center gap-1">
+              {/* <span className="text-[10px] text-[#666158] flex items-center gap-1">
                 <Sparkles className="w-2.5 h-2.5 text-[#8C6920]" />
                 {selectedVariant.volumeMl >= 30 ? '+2ml sample included' : 'Discovery format'}
-              </span>
+              </span> */}
             </div>
 
             <button
@@ -191,7 +191,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
                   <span>Added</span>
                 </>
               ) : (
-                <span>Add to Flacon</span>
+                <span>Add to Cart</span>
               )}
             </button>
           </div>
