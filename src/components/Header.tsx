@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShoppingBag, Heart, Search, Sparkles, Sliders, Menu, X, ShieldCheck } from 'lucide-react';
+import { ShoppingBag, Heart, Search, Sparkles,  X, ShieldCheck } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useProducts } from '../context/ProductContext';
 import type { OlfactoryFamily } from '../types';

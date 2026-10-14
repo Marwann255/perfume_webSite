@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShieldCheck, Sparkles, RefreshCw, Send, Check } from 'lucide-react';
+// import { ShieldCheck, Sparkles, RefreshCw, Send, Check } from 'lucide-react';
 import type { OlfactoryFamily } from '../types';
 import { useProducts } from '../context/ProductContext';
 

@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import {
   ArrowLeft,
-  Star,
+  // Star,
   Sparkles,
   Heart,
-  ShieldCheck,
+  // ShieldCheck,
   Clock,
   Wind,
-  Layers,
+  // Layers,
   Check,
-  Lock
+  // Lock
 } from 'lucide-react';
 import type { PerfumeProduct, BottleVariant } from '../types';
 import { useCart } from '../context/CartContext';
@@ -28,8 +28,8 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack })
   const [selectedImage, setSelectedImage] = useState<'hero' | 'ambient' | 'detail'>('hero');
   const [quantity, setQuantity] = useState(1);
   const [engraving, setEngraving] = useState('');
-  const [isEngravingOpen, setIsEngravingOpen] = useState(false);
-  const [activePyramidTier, setActivePyramidTier] = useState<'all' | 'top' | 'heart' | 'base'>('all');
+  // const [isEngravingOpen, setIsEngravingOpen] = useState(false);
+  // const [activePyramidTier, setActivePyramidTier] = useState<'all' | 'top' | 'heart' | 'base'>('all');
   const [addedSuccess, setAddedSuccess] = useState(false);
 
   const selectedVariant: BottleVariant = product.variants[selectedVariantIdx] || product.variants[0];
