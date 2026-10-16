@@ -8,5 +8,5 @@ export default defineConfig({
     tailwindcss(),
     react(),
   ],
-  base: '/perfume_webSite/'
+  base: process.env.VERCEL ? '/' : '/perfume_webSite/',
 })
